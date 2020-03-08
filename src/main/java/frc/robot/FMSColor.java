@@ -39,6 +39,6 @@ public final class FMSColor {
     }
 
     public static boolean didFMSSendColor() {
-        return DriverStation.getInstance().getGameSpecificMessage().length() > 0;
+        return getFMSColor() != null;
     }
 }
