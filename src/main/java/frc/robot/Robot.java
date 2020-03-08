@@ -18,11 +18,10 @@ public class Robot extends TimedRobot {
     SmartDashboard.putData("Spin Panel by color without condition",
         new SpinPanelByColorWithoutCondition(() -> spinner.kBlue));
     SmartDashboard.putData("Spin Panel by color with condition", new SpinPanelByColor());
-    SmartDashboard.putData("Spin Panel by color cmdg", new SpinPanelByColorCmdG(true));
     SmartDashboard.putNumber("Spin Panel amount of spins", 3.5);
     SmartDashboard.putData("Spin Panel by rotation",
         new SpinPanelByRotation(SmartDashboard.getNumber("Spin Panel amount of spins", 3.5)));
-    SmartDashboard.putData("Spin Panel by rotation cmdg", new SpinPanelByColorCmdG(false));
+    SmartDashboard.putData("Spin Panel by rotation cmdg", new SpinPanelByColorCmdG(true));
     SmartDashboard.putString("Setpoint", "not yet");
   }
 
