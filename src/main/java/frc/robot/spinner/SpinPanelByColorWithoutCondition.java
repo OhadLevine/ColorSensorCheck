@@ -28,9 +28,9 @@ public class SpinPanelByColorWithoutCondition extends CommandBase {
   public void initialize() {
     startingColor = spinner.getColor();
     spinDirection = spinner.calculateSpinDirection(startingColor, setpoint.get());
-    SmartDashboard.putString("Starting Color", spinner.ColorToString(startingColor));
+    SmartDashboard.putString("Starting Color", spinner.colorToString(startingColor));
     SmartDashboard.putNumber("Spin Direction", spinDirection);
-    SmartDashboard.putString("Setpoint", spinner.ColorToString(setpoint.get()));
+    SmartDashboard.putString("Setpoint", spinner.colorToString(setpoint.get()));
   }
 
   @Override

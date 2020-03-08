@@ -31,7 +31,8 @@ public class Spinner extends SubsystemBase {
    *         not met.
    */
   public Color getColor() {
-    return colorSensor.getColor();
+    ColorMatchResult match = colorMatcher.matchClosestColor(colorSensor.getColor());
+    return match.color;
   }
 
   /**
@@ -74,7 +75,7 @@ public class Spinner extends SubsystemBase {
     colorMatcher.setConfidenceThreshold(0.9);
   }
 
-  public String ColorToString(Color color) {
+  public String colorToString(Color color) {
     if (compareColors(color, kBlue)) {
       return "Blue";
     } else if (compareColors(color, kRed)) {
